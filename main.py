@@ -6,7 +6,9 @@ token = 'OTUyNDA3ODQ3NzQ3MDkyNTAx.Yi1k7Q.eJ0EOIBCWFubMyyU4PvWxr9kh9w'
 resposta = 'Olá mande as suas duvidas na DM do meu criador: stryx今#7108'
 ola = 'Olá estou ativo cuidando esse canal'
 inicio = 'Inicializando em 3,2,1...'
-receba = 'Rengar saiu para caçar'
+saida = 'Rengar saiu para caçar'
+conclusao = 'Extensões prontas'
+instalado = 'Bibliotecas instaladas'
 
 #prefixo inexistente ( SEMPRE ATIVADO )
 bot = commands.Bot(command_prefix="")
@@ -14,9 +16,11 @@ bot = commands.Bot(command_prefix="")
 #evento de inicialização ( MENSAGENS NO CONSOLE )
 @bot.event
 async def on_ready():
-    print('Bibliotecas instaladas')
-    print('Extensões prontas')
-
+    print(inicio)
+    print(instalado)
+    print(conclusao)
+    print(saida)
+    
 #evento de mensagens ( MENSAGENS QUE SAO EXCLUIDAS )  
 @bot.event
 async def on_message(message):
