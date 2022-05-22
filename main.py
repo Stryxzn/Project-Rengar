@@ -1,22 +1,23 @@
 import discord
 from discord.ext import commands
 
-#variaveis
+#variaveis ( TIRANDO O TOKEN E A RESPOSTA AS OUTRAS SAO FUTEIS )
 token = 'OTUyNDA3ODQ3NzQ3MDkyNTAx.Yi1k7Q.eJ0EOIBCWFubMyyU4PvWxr9kh9w'
 resposta = 'Olá mande as suas duvidas na DM do meu criador: stryx今#7108'
 ola = 'Olá estou ativo cuidando esse canal'
 inicio = 'Inicializando em 3,2,1...'
 receba = 'Rengar saiu para caçar'
 
-#prefixo inexistente
+#prefixo inexistente ( SEMPRE ATIVADO )
 bot = commands.Bot(command_prefix="")
 
-
+#evento de inicialização ( MENSAGENS NO CONSOLE )
 @bot.event
 async def on_ready():
     print('Bibliotecas instaladas')
     print('Extensões prontas')
 
+#evento de mensagens ( MENSAGENS QUE SAO EXCLUIDAS )  
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
@@ -295,7 +296,7 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-
+#comando de ajuda ( MENSAGEM DIRETA )
 @bot.command(name="ajuda", case_insensitive="true")
 async def support(ctx):
 
@@ -303,7 +304,7 @@ async def support(ctx):
 
     await message.delete()
 
-
+#comando para testar atividade ( MENSAGEM DIRETA )
 @bot.command(name="rengar", case_insensitive="true")
 async def most_valuable(ctx):
 
